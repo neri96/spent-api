@@ -11,9 +11,9 @@
     "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "rootDir": "./server",
+    "rootDir": "./",
     "declaration": true
   },
-  "include": ["server/**/*.ts"],
-  "exclude": ["node_modules", "server/**/*.spec.ts"]
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }
