@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc --project ./server/tsconfig.json",
-    "start": "node dist/index.js",
-    "dev": "nodemon --exec ts-node server/index.ts",
-    "postinstall": "npm run build"
+    "start": "ts-node src/index.ts",
+    "dev": "nodemon index.ts",
+    "build": "tsc --project ./tsconfig.json"
   },
   "keywords": [],
   "author": "",
@@ -34,5 +33,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.3",
     "ts-node": "^10.9.2"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
