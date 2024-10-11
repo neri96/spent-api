@@ -10,9 +10,10 @@
     "preserveConstEnums": true,
     "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "dist",
+    "outDir": "./dist",
+    "rootDir": "./server",
     "declaration": true
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["src/**/*.spec.ts", "node_modules"]
+  "include": ["server/**/*.ts"],
+  "exclude": ["node_modules", "server/**/*.spec.ts"]
 }
