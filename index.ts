@@ -13,6 +13,8 @@ import { errorHandler } from "./middlewares/errorHandler";
 
 const app: Application = express();
 
+app.set("trust proxy", 1);
+
 app.use(
   cors({
     origin: process.env.CLIENT,
@@ -21,6 +23,9 @@ app.use(
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
+console.log("CORS origin:", process.env.CLIENT);
+app.options("*", cors());
+
 app.use(express.json());
 app.use(cookieParser());
 
